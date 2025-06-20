@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Restaurant Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: red;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .menu {
+      background-color: #eee;
+      border: 2px solid black;
+      padding: 20px;
+      position: relative;
+    }
+
+    .menu p {
+      margin: 0;
+    }
+
+    .label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 10px;
+      font-weight: bold;
+      border: 1px solid black;
+    }
+
+    .chicken .label {
+      background-color: pink;
+    }
+
+    .beef .label {
+      background-color: red;
+      color: white;
+    }
+
+    .sushi .label {
+      background-color: yellow;
+    }
+
+    /* Mobile: full width */
+    .menu {
+      width: 100%;
+    }
+
+    /* Tablet: 2 on top, 1 below */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .menu {
+        width: calc(50% - 10px);
+      }
+      .menu:nth-child(3) {
+        width: 100%;
+      }
+    }
+
+    /* Desktop: 3 in a row */
+    @media (min-width: 992px) {
+      .menu {
+        width: calc(33.333% - 13.5px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Menu</h1>
+
+  <div class="container">
+    <section class="menu chicken">
+      <div class="label">Chicken</div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </p>
+    </section>
+
+    <section class="menu beef">
+      <div class="label">Beef</div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </p>
+    </section>
+
+    <section class="menu sushi">
+      <div class="label">Sushi</div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
+        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </p>
+    </section>
+  </div>
+
+</body>
+</html>
